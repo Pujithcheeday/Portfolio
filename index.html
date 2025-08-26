@@ -1,0 +1,149 @@
+<!-- FILE: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheeday Pujith Sai | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">Pujith sai Cheeday<span class="accent">.com</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="highlight">Cheeday Pujith Sai</span></h1>
+      <p>B.Tech in Artificial Intelligence & Data Science | Full-Stack Developer | Toastmaster | NSS Volunteer</p>
+      <div class="cta">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="Cheeday_Pujith_Sai_Resume.pdf" class="btn outline" target="_blank">Download Resume</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="pujith sai.jpg" alt="Pujith Sai">
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate AI & Data Science student with strong expertise in Python, Java, and full-stack development.  
+      Member of Smart City Lab (in collaboration with IIIT Hyderabad), Toastmasters Club, and an active NSS Volunteer.  
+      I aim to leverage my technical and leadership skills to contribute to impactful real-world projects.
+    </p>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>  B.Tech in AI & Data Science </h3>
+        <p><strong>KIET College</strong>, JNTUK</p>
+        <span>2022 – Present</span>
+      </div>
+      <div class="timeline-item">
+        <h3>Intermediate (MPC)</h3>
+        <p><strong>  Sri Chaitanya Jr. College, Bhimavaram  </strong></p>
+        <span>2020 – 2022 | 74%</span>
+      </div>
+      <div class="timeline-item">
+        <h3>SSC</h3>
+        <p><strong>ZPH School, Chinna Amiram</strong>, Bhimavaram Mandal</p>
+        <span>2019 – 2020 | 68%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><span>Python</span><div class="bar"><div style="width:95%"></div></div></div>
+      <div class="skill"><span>Machine Learning</span><div class="bar"><div style="width:85%"></div></div></div>
+      <div class="skill"><span>Java</span><div class="bar"><div style="width:80%"></div></div></div>
+      <div class="skill"><span>React / JS</span><div class="bar"><div style="width:75%"></div></div></div>
+      <div class="skill"><span>Databases (MySQL, MongoDB)</span><div class="bar"><div style="width:70%"></div></div></div>
+      <div class="skill"><span>Full-Stack Development</span><div class="bar"><div style="width:78%"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Food Fusion</h3>
+        <p>Website to learn recipes with AI feature: suggest dishes based on available ingredients.</p>
+        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio showcasing bio, projects, resume, and contact info.</p>
+        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>AI Image Summarizer</h3>
+        <p>AI tool that explains images by generating descriptive captions.</p>
+        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section">
+    <h2>Achievements & Memberships</h2>
+    <ul>
+      <li>Toastmasters Club – Public Speaking & Leadership</li>
+      <li>Smart City Lab – Collaboration with IIIT Hyderabad</li>
+      <li>NSS Volunteer – KIET College</li>
+    </ul>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p>You can view or download my latest resume below:</p>
+    <a href="Cheeday_Pujith_Sai_Resume.docx" class="btn" target="_blank">View Resume</a>
+
+    <a href="Cheeday_Pujith_Sai_Resume.docx" class="btn outline" download>Download Resume</a>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Cheeday Pujith Sai | Portfolio</p>
+    <div class="socials">
+      <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/pujith-sai-cheeday-58078a321" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
