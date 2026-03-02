@@ -4,146 +4,644 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheeday Pujith Sai | Portfolio</title>
+  <title>Cheeday Pujith Sai | AI & Data Science Portfolio</title>
+  <meta name="description" content="Pujith Sai Cheeday - AI & Data Science Student | Full-Stack Developer | Machine Learning Enthusiast">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="advanced-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href=" https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+        <div class="loader-circle"></div>
+      </div>
+      <h2 class="loading-text">Loading Portfolio<span class="dots"></span></h2>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress"></div>
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
-    <div class="logo">Pujith sai Cheeday<span class="accent">.com</span></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle">🌙</button>
+    <div class="logo glitch" data-text="pujithcheeday.com">pujithcheeday<span class="accent">.com</span></div>
+    <nav class="nav-menu">
+      <a href="#home" class="nav-link">
+        <span class="nav-link-text">Home</span>
+        <span class="nav-link-hover">Home</span>
+      </a>
+      <a href="#about" class="nav-link">
+        <span class="nav-link-text">About</span>
+        <span class="nav-link-hover">About</span>
+      </a>
+      <a href="#education" class="nav-link">
+        <span class="nav-link-text">Education</span>
+        <span class="nav-link-hover">Education</span>
+      </a>
+      <a href="#experience" class="nav-link">
+        <span class="nav-link-text">Experience</span>
+        <span class="nav-link-hover">Experience</span>
+      </a>
+      <a href="#skills" class="nav-link">
+        <span class="nav-link-text">Skills</span>
+        <span class="nav-link-hover">Skills</span>
+      </a>
+      <a href="#projects" class="nav-link">
+        <span class="nav-link-text">Projects</span>
+        <span class="nav-link-hover">Projects</span>
+      </a>
+      <a href="#contact" class="nav-link">
+        <span class="nav-link-text">Contact</span>
+        <span class="nav-link-hover">Contact</span>
+      </a>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
     </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hi, I'm <span class="highlight">Cheeday Pujith Sai</span></h1>
-      <p>B.Tech in Artificial Intelligence & Data Science | Full-Stack Developer | Toastmaster | NSS Volunteer</p>
-      <div class="cta">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="Cheeday_Pujith_Sai_Resume.pdf" class="btn outline" target="_blank">Download Resume</a>
+  <section id="home" class="hero">
+    <!-- Animated Background -->
+    <canvas id="canvas-background"></canvas>
+    <div class="particles" id="particles"></div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-label">
+          <span>Welcome to my portfolio</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line">
+            <span class="line-inner">Hi, I'm</span>
+          </span>
+          <span class="line highlight-line">
+            <span class="line-inner gradient-text typing-container">
+              <span class="typing-text">Cheeday Pujith Sai</span>
+              <span class="cursor-blink">|</span>
+            </span>
+          </span>
+        </h1>
+        <div class="hero-roles professional-roles">
+          <span class="role role-ai" data-text="AI Engineer">AI Engineer</span>
+          <span class="separator">•</span>
+          <span class="role role-ds" data-text="Data Scientist">Data Scientist</span>
+          <span class="separator">•</span>
+          <span class="role role-dev" data-text="Full-Stack Developer">Full-Stack Developer</span>
+        </div>
+        <p class="hero-subtitle professional-subtitle">
+          <span class="subtitle-line ai-emphasis">B.Tech in Artificial Intelligence & Data Science</span>
+          <span class="subtitle-line dev-emphasis">Full Stack Developer | Building intelligent solutions</span>
+        </p>
+        
+        <div class="cta">
+          <a href="#projects" class="btn btn-primary magnetic-btn">
+            <span class="btn-content">
+              <i class="fas fa-rocket"></i>
+              <span>Explore My Work</span>
+            </span>
+            <span class="btn-shine"></span>
+          </a>
+          <a href="resume.pdf" class="btn btn-outline magnetic-btn" download="Cheeday_Pujith_Sai_Resume.pdf">
+            <span class="btn-content">
+              <i class="fas fa-download"></i>
+              <span>Download Resume</span>
+            </span>
+            <span class="btn-shine"></span>
+          </a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://github.com/Pujithcheeday" target="_blank" class="social-icon magnetic-btn" data-tooltip="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="icon-bg"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/pujith-sai-cheeday-58078a321/" target="_blank" class="social-icon magnetic-btn" data-tooltip="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span class="icon-bg"></span>
+          </a>
+          <a href="mailto:pujithcheeday@gmail.com" class="social-icon magnetic-btn" data-tooltip="Email">
+            <i class="fas fa-envelope"></i>
+            <span class="icon-bg"></span>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon magnetic-btn" data-tooltip="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="icon-bg"></span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-img-container">
+          <div class="img-blob blob-1"></div>
+          <div class="img-blob blob-2"></div>
+          <div class="img-glow"></div>
+          <div class="img-wrapper floating" data-depth="0.2">
+            <img src="pujith sai.jpg" alt="Pujith Sai Cheeday" class="hero-img">
+            <div class="img-overlay"></div>
+          </div>
+          <div class="floating-shapes">
+            <div class="shape shape-1" data-depth="0.3"><i class="fas fa-code"></i></div>
+            <div class="shape shape-2" data-depth="0.5"><i class="fas fa-brain"></i></div>
+            <div class="shape shape-3" data-depth="0.4"><i class="fas fa-database"></i></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="pujith sai.jpg" alt="Pujith Sai">
+    
+    <div class="scroll-indicator">
+      <span class="mouse">
+        <span class="wheel"></span>
+      </span>
+      <span class="scroll-text">Scroll Down</span>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I’m a passionate AI & Data Science student with strong expertise in Python, Java, and full-stack development.  
-      Member of Smart City Lab (in collaboration with IIIT Hyderabad), Toastmasters Club, and an active NSS Volunteer.  
-      I aim to leverage my technical and leadership skills to contribute to impactful real-world projects.
-    </p>
+  <section id="about" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">01.</span>
+      <h2 class="section-title">
+        <i class="fas fa-user-circle"></i>
+        <span class="title-text split-text">About Me</span>
+      </h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text-container">
+        <p class="about-text">
+          I'm a passionate <span class="highlight-text">AI & Data Science student</span> with a strong drive to create 
+          innovative solutions that make a difference. My journey in technology combines deep technical expertise 
+          with creative problem-solving.
+        </p>
+        <p class="about-text">
+          Currently pursuing B.Tech at <span class="highlight-text">KIET College (JNTUK)</span>, I'm actively involved in 
+          cutting-edge projects at the <span class="highlight-text">Smart City Lab</span> in collaboration with 
+          IIIT Hyderabad. My expertise spans from machine learning algorithms to full-stack web development.
+        </p>
+        <p class="about-text">
+          Beyond coding, I'm a proud member of <span class="highlight-text">Toastmasters International</span>, 
+          where I've honed my public speaking and leadership skills, and an active 
+          <span class="highlight-text">NSS Volunteer</span>, contributing to community development initiatives.
+        </p>
+        
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Problem Solver & Innovator</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Team Player & Leader</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Continuous Learner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card magnetic-btn">
+        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+        <div class="stat-number" data-target="20">0</div>
+        <div class="stat-label">Projects Completed</div>
+        <div class="stat-bar"></div>
+      </div>
+      <div class="stat-card magnetic-btn">
+        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        <div class="stat-number" data-target="500">0</div>
+        <div class="stat-label">Hours of Coding</div>
+        <div class="stat-bar"></div>
+      </div>
+      <div class="stat-card magnetic-btn">
+        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-label">Tech Tags Mastered</div>
+        <div class="stat-bar"></div>
+      </div>
+      <div class="stat-card magnetic-btn">
+        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Certifications</div>
+        <div class="stat-bar"></div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== EDUCATION ===== -->
-  <section id="education" class="section">
-    <h2>Education</h2>
+  <section id="education" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">02.</span>
+      <h2 class="section-title">
+        <i class="fas fa-graduation-cap"></i>
+        <span class="title-text split-text">Education</span>
+      </h2>
+    </div>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>  B.Tech in AI & Data Science </h3>
+        <div class="timeline-icon"><i class="fas fa-university"></i></div>
+        <h3>B.Tech in AI & Data Science</h3>
         <p><strong>KIET College</strong>, JNTUK</p>
-        <span>2022 – Present</span>
+        <span class="timeline-date">2022 – Present</span>
       </div>
       <div class="timeline-item">
+        <div class="timeline-icon"><i class="fas fa-school"></i></div>
         <h3>Intermediate (MPC)</h3>
-        <p><strong>  Sri Chaitanya Jr. College, Bhimavaram  </strong></p>
-        <span>2020 – 2022 | 74%</span>
+        <p><strong>Sri Chaitanya Jr. College, Bhimavaram</strong></p>
+        <span class="timeline-date">2020 – 2022 | 74%</span>
       </div>
       <div class="timeline-item">
+        <div class="timeline-icon"><i class="fas fa-book"></i></div>
         <h3>SSC</h3>
         <p><strong>ZPH School, Chinna Amiram</strong>, Bhimavaram Mandal</p>
-        <span>2019 – 2020 | 68%</span>
+        <span class="timeline-date">2019 – 2020 | 68%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">03.</span>
+      <h2 class="section-title">
+        <i class="fas fa-briefcase"></i>
+        <span class="title-text split-text">Experience & Leadership</span>
+      </h2>
+    </div>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="experience-icon"><i class="fas fa-city"></i></div>
+        <h3>Smart City Lab Member</h3>
+        <p class="company">Collaboration with IIIT Hyderabad</p>
+        <p class="duration">2023 – Present</p>
+        <ul class="experience-list">
+          <li>Working on innovative smart city solutions and IoT projects</li>
+          <li>Collaborating with researchers on cutting-edge technology</li>
+          <li>Developing AI-powered solutions for urban challenges</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <div class="experience-icon"><i class="fas fa-microphone"></i></div>
+        <h3>Toastmasters Club Member</h3>
+        <p class="company">KIET College</p>
+        <p class="duration">2022 – Present</p>
+        <ul class="experience-list">
+          <li>Enhanced public speaking and leadership skills</li>
+          <li>Participated in multiple speaking competitions</li>
+          <li>Mentored junior members in communication skills</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <div class="experience-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>NSS Volunteer</h3>
+        <p class="company">KIET College</p>
+        <p class="duration">2022 – Present</p>
+        <ul class="experience-list">
+          <li>Organized community service initiatives and social campaigns</li>
+          <li>Led team projects for environmental awareness</li>
+          <li>Contributed to rural development programs</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
+  <section id="skills" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">04.</span>
+      <h2 class="section-title">
+        <i class="fas fa-code"></i>
+        <span class="title-text split-text">Technical Skills</span>
+      </h2>
+    </div>
+    
+    <div class="tech-stack">
+      <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+      <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+      <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+      <div class="tech-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+      <div class="tech-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="tech-item"><i class="fab fa-node"></i><span>Node.js</span></div>
+      <div class="tech-item"><i class="fas fa-database"></i><span>MongoDB</span></div>
+      <div class="tech-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+      <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+      <div class="tech-item"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+      <div class="tech-item"><i class="fas fa-robot"></i><span>AI</span></div>
+    </div>
+
     <div class="skills-grid">
-      <div class="skill"><span>Python</span><div class="bar"><div style="width:95%"></div></div></div>
-      <div class="skill"><span>Machine Learning</span><div class="bar"><div style="width:85%"></div></div></div>
-      <div class="skill"><span>Java</span><div class="bar"><div style="width:80%"></div></div></div>
-      <div class="skill"><span>React / JS</span><div class="bar"><div style="width:75%"></div></div></div>
-      <div class="skill"><span>Databases (MySQL, MongoDB)</span><div class="bar"><div style="width:70%"></div></div></div>
-      <div class="skill"><span>Full-Stack Development</span><div class="bar"><div style="width:78%"></div></div></div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fab fa-python"></i> Python</span>
+          <span class="percentage">95%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:95%" data-width="95"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fas fa-brain"></i> Machine Learning</span>
+          <span class="percentage">85%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:85%" data-width="85"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fab fa-java"></i> Java</span>
+          <span class="percentage">80%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:80%" data-width="80"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fab fa-react"></i> React / JavaScript</span>
+          <span class="percentage">75%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:75%" data-width="75"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fas fa-database"></i> Databases (MySQL, MongoDB)</span>
+          <span class="percentage">70%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:70%" data-width="70"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-header">
+          <span><i class="fas fa-layer-group"></i> Full-Stack Development</span>
+          <span class="percentage">78%</span>
+        </div>
+        <div class="bar"><div class="bar-fill" style="width:78%" data-width="78"></div></div>
+      </div>
     </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+  <section id="projects" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">05.</span>
+      <h2 class="section-title">
+        <i class="fas fa-laptop-code"></i>
+        <span class="title-text split-text">Featured Projects</span>
+      </h2>
+    </div>
     <div class="projects-grid">
-      <div class="card">
-        <h3>Food Fusion</h3>
-        <p>Website to learn recipes with AI feature: suggest dishes based on available ingredients.</p>
-        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/Customer-Churn-Prediction" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Data Science</span>
+        </div>
+        <h3><i class="fas fa-chart-line"></i> Customer Churn Prediction</h3>
+        <p>ML model to predict customer churn using advanced analytics and data science techniques. Helps businesses identify at-risk customers and improve retention strategies.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/Customer-Churn-Prediction" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/Customer-Churn-Prediction" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Responsive personal portfolio showcasing bio, projects, resume, and contact info.</p>
-        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/IMAGE-SUMMARY" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">AI</span>
+          <span class="tech-tag">Computer Vision</span>
+        </div>
+        <h3><i class="fas fa-image"></i> IMAGE-SUMMARY</h3>
+        <p>A tool that summarizes your images using AI-powered computer vision and natural language processing to generate descriptive captions and insights.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/IMAGE-SUMMARY" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/IMAGE-SUMMARY" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>AI Image Summarizer</h3>
-        <p>AI tool that explains images by generating descriptive captions.</p>
-        <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/air-quality-node" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">IoT</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Real-time Data</span>
+        </div>
+        <h3><i class="fas fa-wind"></i> Air Quality Monitoring System</h3>
+        <p>Environmental monitoring system supporting real-time data acquisition and analysis. Scalable IoT solution for tracking air quality metrics.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/air-quality-node" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/air-quality-node" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
+      </div>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/prompt_maker" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">AI</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <h3><i class="fas fa-magic"></i> Prompt Maker</h3>
+        <p>TypeScript-based intelligent prompt generation tool for AI applications. Helps create optimized prompts for better AI model interactions.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/prompt_maker" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/prompt_maker" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
+      </div>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/zomato" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Web Development</span>
+          <span class="tech-tag">Full-Stack</span>
+          <span class="tech-tag">API</span>
+        </div>
+        <h3><i class="fas fa-utensils"></i> Zomato Clone</h3>
+        <p>Full-stack web application inspired by Zomato. Features restaurant listings, user reviews, and modern UI/UX design patterns.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/zomato" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/zomato" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
+      </div>
+      <div class="card project-card">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="https://github.com/Pujithcheeday/Portfolio" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <h3><i class="fas fa-user"></i> Portfolio Website</h3>
+        <p>Responsive personal portfolio showcasing bio, projects, resume, and contact info with modern animations and interactive elements.</p>
+        <div class="project-links">
+          <a href="https://github.com/Pujithcheeday/Portfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/Pujithcheeday/Portfolio" class="demo-link"><i class="fas fa-eye"></i> View Project</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ACHIEVEMENTS ===== -->
-  <section id="achievements" class="section">
-    <h2>Achievements & Memberships</h2>
-    <ul>
-      <li>Toastmasters Club – Public Speaking & Leadership</li>
-      <li>Smart City Lab – Collaboration with IIIT Hyderabad</li>
-      <li>NSS Volunteer – KIET College</li>
-    </ul>
-  </section>
-
-  <!-- ===== RESUME ===== -->
-  <section id="resume" class="section">
-    <h2>Resume</h2>
-    <p>You can view or download my latest resume below:</p>
-    <a href="Cheeday_Pujith_Sai_Resume.docx" class="btn" target="_blank">View Resume</a>
-
-    <a href="Cheeday_Pujith_Sai_Resume.docx" class="btn outline" download>Download Resume</a>
+  <!-- ===== CERTIFICATIONS ===== -->  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">06.</span>
+      <h2 class="section-title">
+        <i class="fas fa-certificate"></i>
+        <span class="title-text split-text">Certifications & Achievements</span>
+      </h2>
+    </div>
+    <div class="certifications-grid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-medal"></i></div>
+        <h3>Python Programming</h3>
+        <p class="cert-issuer">Coursera / Google</p>
+        <p class="cert-date">2023</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Machine Learning Specialization</h3>
+        <p class="cert-issuer">Stanford Online</p>
+        <p class="cert-date">2023</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Full-Stack Web Development</h3>
+        <p class="cert-issuer">Udemy</p>
+        <p class="cert-date">2024</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-star"></i></div>
+        <h3>Toastmasters Leadership</h3>
+        <p class="cert-issuer">Toastmasters International</p>
+        <p class="cert-date">2023</p>
+      </div>
+    </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <section id="contact" class="section reveal">
+    <div class="section-header">
+      <span class="section-number">07.</span>
+      <h2 class="section-title">
+        <i class="fas fa-envelope"></i>
+        <span class="title-text split-text">Get In Touch</span>
+      </h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Connect!</h3>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:pujithcheeday@gmail.com">pujithcheeday@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+919885658567">+91 98856 58567</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Bhimavaram, Andhra Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" placeholder="Subject" required>
+          <i class="fas fa-tag"></i>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <i class="fas fa-comment"></i>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
     <p id="form-status"></p>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 Cheeday Pujith Sai | Portfolio</p>
-    <div class="socials">
-      <a href="https://github.com/Pujithcheeday" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/pujith-sai-cheeday-58078a321" target="_blank">LinkedIn</a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Cheeday Pujith Sai</h3>
+        <p>AI & Data Science Student | Full-Stack Developer</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="https://github.com/Pujithcheeday" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/pujith-sai-cheeday-58078a321/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:pujithcheeday@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cheeday Pujith Sai | Designed with <i class="fas fa-heart"></i> & <i class="fas fa-code"></i></p>
+    </div>
+    <button id="scroll-top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
   </footer>
 </body>
 </html>
